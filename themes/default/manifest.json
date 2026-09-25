@@ -1,0 +1,12 @@
+{
+    "id": "default",
+    "name": "Tema Padrão",
+    "description": "Tema original da Biblioteca Adgina com visual frosted glass claro e escuro.",
+    "author": "Vexill",
+    "version": "1.0.0",
+    "price": 0,
+    "isWorkshop": false,
+    "preview": "cover.png",
+    "music": "default.mp3",
+    "selectSound": "select.mp3"
+}

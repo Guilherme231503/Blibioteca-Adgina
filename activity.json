@@ -1,0 +1,1911 @@
+{
+  "sessions": {
+    "souzaalvesguilherme13@gmail.com": {
+      "events": [
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:00:19.913Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:00:19.916Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:16:51.243Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 991,
+          "date": "2026-09-25T17:16:51.256Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:16:53.522Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:17:05.670Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 7,
+          "date": "2026-09-25T17:17:13.451Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:17:14.571Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:17:14.574Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:19:28.893Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 134,
+          "date": "2026-09-25T17:19:28.909Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:19:30.064Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:19:31.534Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:19:40.135Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:19:40.139Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:20:09.888Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 29,
+          "date": "2026-09-25T17:20:09.894Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:20:21.165Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 1,
+          "date": "2026-09-25T17:20:22.808Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:20:22.813Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:20:22.815Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:20:43.551Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 20,
+          "date": "2026-09-25T17:20:43.559Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:20:47.570Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 32,
+          "date": "2026-09-25T17:21:20.391Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:21:30.547Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 3,
+          "date": "2026-09-25T17:21:34.129Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:21:35.407Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:21:39.655Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 3,
+          "date": "2026-09-25T17:21:43.465Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:21:45.172Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:21:45.181Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:21:57.464Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 12,
+          "date": "2026-09-25T17:21:57.476Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:21:58.264Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:22:11.647Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 98,
+          "date": "2026-09-25T17:23:49.974Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:23:52.004Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:23:52.007Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:27:18.890Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 206,
+          "date": "2026-09-25T17:27:18.924Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:27:19.973Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:27:24.561Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:31:19.934Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:31:19.937Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:31:31.486Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 6,
+          "date": "2026-09-25T17:31:37.680Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:31:38.895Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:31:45.273Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 7,
+          "date": "2026-09-25T17:31:52.975Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:31:54.128Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:31:58.752Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 13,
+          "date": "2026-09-25T17:32:12.370Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:32:13.817Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:32:22.662Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:32:49.931Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:33:49.775Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 87,
+          "date": "2026-09-25T17:33:50.537Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:33:50.581Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:34:07.720Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 6,
+          "date": "2026-09-25T17:34:14.441Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:34:15.768Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:35:18.073Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:35:18.077Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:37:15.067Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 116,
+          "date": "2026-09-25T17:37:15.096Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:37:16.055Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:37:25.578Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 43,
+          "date": "2026-09-25T17:38:08.950Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:38:09.063Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:38:23.217Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 1,
+          "date": "2026-09-25T17:38:24.697Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:38:32.332Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:38:32.335Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:38:48.213Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 15,
+          "date": "2026-09-25T17:38:48.216Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:38:49.142Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:38:56.205Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:40:42.073Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:48:38.377Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 582,
+          "date": "2026-09-25T17:48:38.379Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:48:39.252Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:48:42.862Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:48:42.874Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:48:46.284Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 3,
+          "date": "2026-09-25T17:48:46.287Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:48:59.401Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:48:59.494Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "cronicas-de-narnia-volume-unico",
+          "seconds": 31,
+          "date": "2026-09-25T17:49:21.962Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "cronicas-de-narnia-volume-unico",
+          "seconds": 2,
+          "date": "2026-09-25T17:49:29.882Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:49:30.560Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:49:30.564Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:49:32.930Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 2,
+          "date": "2026-09-25T17:49:32.935Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:49:34.016Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 7,
+          "date": "2026-09-25T17:49:41.022Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:49:44.075Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 4,
+          "date": "2026-09-25T17:49:48.473Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:49:49.328Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:49:49.331Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:14.955Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 25,
+          "date": "2026-09-25T17:50:14.962Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:15.830Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:17.695Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 3,
+          "date": "2026-09-25T17:50:20.941Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:22.039Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:22.042Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:49.380Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 27,
+          "date": "2026-09-25T17:50:49.385Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:49.467Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:49.473Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:51.330Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 1,
+          "date": "2026-09-25T17:50:51.336Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:52.173Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:50:52.179Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:51:07.384Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 4,
+          "date": "2026-09-25T17:51:11.523Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:51:11.533Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:53:11.991Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 139,
+          "date": "2026-09-25T17:53:12.000Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:53:12.938Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:53:15.391Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:53:18.142Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 4,
+          "date": "2026-09-25T17:53:22.707Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:53:22.719Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:53:22.723Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:59:24.344Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 12,
+          "date": "2026-09-25T17:59:37.165Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:59:38.201Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:59:40.293Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 3,
+          "date": "2026-09-25T17:59:44.135Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:59:44.205Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:59:45.681Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T17:59:46.501Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "cronicas-de-narnia-volume-unico",
+          "seconds": 16,
+          "date": "2026-09-25T18:00:03.648Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:00:04.835Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 2,
+          "date": "2026-09-25T18:00:06.887Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:00:16.875Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:00:31.291Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:04:33.691Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 258,
+          "date": "2026-09-25T18:04:35.157Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:04:50.384Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 6,
+          "date": "2026-09-25T18:04:56.643Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "cronicas-de-narnia-volume-unico",
+          "seconds": 284,
+          "date": "2026-09-25T18:04:57.860Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:10.825Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:10.836Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:21.423Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 10,
+          "date": "2026-09-25T18:05:21.433Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:23.295Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:23.298Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:29.505Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 6,
+          "date": "2026-09-25T18:05:29.516Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:32.282Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 8,
+          "date": "2026-09-25T18:05:40.694Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:42.671Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:05:42.684Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:10:14.535Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 271,
+          "date": "2026-09-25T18:10:14.539Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:10:15.682Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:10:22.596Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:10:22.603Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:10:36.962Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 14,
+          "date": "2026-09-25T18:10:36.966Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:10:39.118Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:10:46.037Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 7,
+          "date": "2026-09-25T18:10:53.087Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:11:00.797Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:11:00.895Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:11:23.705Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:11:27.863Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 5,
+          "date": "2026-09-25T18:11:28.872Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:11:29.991Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:11:44.517Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:11:47.052Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 4,
+          "date": "2026-09-25T18:11:48.603Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:11:52.442Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 3,
+          "date": "2026-09-25T18:11:56.443Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:12:01.710Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 18,
+          "date": "2026-09-25T18:12:20.007Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:12:20.013Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:12:20.017Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:12:25.203Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:12:55.032Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 35,
+          "date": "2026-09-25T18:12:55.035Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "cronicas-de-narnia-volume-unico",
+          "seconds": 6,
+          "date": "2026-09-25T18:13:10.251Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:13:11.364Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:13:16.729Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:13:17.526Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 10,
+          "date": "2026-09-25T18:13:21.786Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:13:27.231Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:13:30.633Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 4,
+          "date": "2026-09-25T18:13:31.534Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:13:37.891Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:13:38.841Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 2,
+          "date": "2026-09-25T18:13:41.717Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:13:42.827Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "cronicas-de-narnia-volume-unico",
+          "seconds": 10,
+          "date": "2026-09-25T18:14:00.455Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:14:02.034Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:14:02.037Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:22:42.243Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 520,
+          "date": "2026-09-25T18:22:42.249Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:22:43.086Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:23:10.401Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 24,
+          "date": "2026-09-25T18:23:35.281Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:23:36.531Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:23:55.930Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 3,
+          "date": "2026-09-25T18:23:59.359Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:24:00.586Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:24:00.589Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:26:43.511Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 162,
+          "date": "2026-09-25T18:26:43.515Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:26:45.116Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "a-parte-que-falta-em-mim",
+          "seconds": 9,
+          "date": "2026-09-25T18:26:57.117Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:27:34.092Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:27:34.096Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:27:34.857Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:27:34.866Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "extraordinario",
+          "seconds": 38,
+          "date": "2026-09-25T18:27:38.591Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:27:53.256Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:27:53.260Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:27:55.400Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 2,
+          "date": "2026-09-25T18:27:55.409Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:28:01.237Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 10,
+          "date": "2026-09-25T18:28:12.148Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:28:12.155Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:28:12.160Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:29:11.826Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 59,
+          "date": "2026-09-25T18:29:11.833Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:29:12.726Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "vidas-secas",
+          "seconds": 1,
+          "date": "2026-09-25T18:29:18.513Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:29:38.580Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:30:29.084Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:30:29.089Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:31:02.359Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 33,
+          "date": "2026-09-25T18:31:02.361Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "cronicas-de-narnia-volume-unico",
+          "seconds": 2,
+          "date": "2026-09-25T18:31:08.374Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "cronicas-de-narnia-volume-unico",
+          "seconds": 33,
+          "date": "2026-09-25T18:31:49.479Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "a-parte-que-falta-em-mim",
+          "seconds": 17,
+          "date": "2026-09-25T18:32:57.764Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:33:19.867Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:33:19.871Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:40:21.309Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 421,
+          "date": "2026-09-25T18:40:21.311Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:40:25.613Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:40:25.622Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:42:26.532Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:42:26.534Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:42:49.377Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 22,
+          "date": "2026-09-25T18:42:49.381Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:42:50.860Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:42:50.863Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:45:06.458Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 135,
+          "date": "2026-09-25T18:45:06.462Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:45:08.574Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:45:08.576Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:46:25.231Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 76,
+          "date": "2026-09-25T18:46:25.234Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:46:26.849Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "harry-potter-e-a-pedra-filosofa",
+          "seconds": 7,
+          "date": "2026-09-25T18:46:43.730Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:46:44.614Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:46:44.620Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:48:38.865Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 114,
+          "date": "2026-09-25T18:48:38.868Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:48:40.129Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:48:42.550Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:48:42.553Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:48:50.685Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 8,
+          "date": "2026-09-25T18:48:50.696Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:48:51.774Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "harry-potter-e-a-camara-secreta",
+          "seconds": 2,
+          "date": "2026-09-25T18:48:55.563Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:48:56.762Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:48:56.764Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 82,
+          "date": "2026-09-25T18:50:18.810Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:50:18.887Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:50:19.711Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:50:27.439Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:50:27.446Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:50:36.958Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 9,
+          "date": "2026-09-25T18:50:36.967Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "harry-potter-e-o-prisioneiro-de-azkaban",
+          "seconds": 4,
+          "date": "2026-09-25T18:50:56.479Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:50:57.108Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:50:57.116Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:52:27.839Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 90,
+          "date": "2026-09-25T18:52:27.869Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:52:29.382Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 3,
+          "date": "2026-09-25T18:52:33.000Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:52:33.031Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:52:33.040Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:53:39.029Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 66,
+          "date": "2026-09-25T18:53:39.034Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:53:40.035Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:53:46.331Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:53:46.334Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:55:39.800Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 113,
+          "date": "2026-09-25T18:55:39.808Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:55:41.766Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:55:41.768Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:58:22.178Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 160,
+          "date": "2026-09-25T18:58:22.193Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:58:23.178Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "harry-potter-e-o-enigma-do-principe",
+          "seconds": 3,
+          "date": "2026-09-25T18:58:29.405Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "harry-potter-e-o-calice-de-fogo",
+          "seconds": 6,
+          "date": "2026-09-25T18:58:37.406Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:58:52.071Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:58:52.076Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T18:59:39.649Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "harry-potter-e-a-camara-secreta",
+          "seconds": 6,
+          "date": "2026-09-25T18:59:59.916Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T19:00:01.094Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "harry-potter-e-o-prisioneiro-de-azkaban",
+          "seconds": 3,
+          "date": "2026-09-25T19:02:05.157Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T19:02:06.201Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T19:02:06.204Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T19:08:59.568Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 413,
+          "date": "2026-09-25T19:08:59.576Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T19:09:00.828Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "harry-potter-e-as-reliquias-da-morte",
+          "seconds": 4,
+          "date": "2026-09-25T19:09:10.714Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T19:09:11.632Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-25T19:09:11.635Z"
+        }
+      ],
+      "totals": {
+        "cronicas-de-narnia-volume-unico": 384,
+        "a-parte-que-falta-em-mim": 26,
+        "extraordinario": 38,
+        "vidas-secas": 1,
+        "harry-potter-e-a-pedra-filosofa": 7,
+        "harry-potter-e-a-camara-secreta": 8,
+        "harry-potter-e-o-prisioneiro-de-azkaban": 7,
+        "harry-potter-e-o-enigma-do-principe": 3,
+        "harry-potter-e-o-calice-de-fogo": 6,
+        "harry-potter-e-as-reliquias-da-morte": 4
+      },
+      "lastSeen": "2026-09-25T19:09:11.635Z"
+    }
+  }
+}

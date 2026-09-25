@@ -1,0 +1,22 @@
+{
+    "light": {
+        "bg-color": "#f5f5f7",
+        "text-color": "#1d1d1f",
+        "glass-bg": "rgba(255, 255, 255, 0.6)",
+        "glass-border": "rgba(255, 255, 255, 0.7)",
+        "glass-shadow": "rgba(0, 0, 0, 0.08)",
+        "shape-color-1": "#e5e5ea",
+        "shape-color-2": "#d1d1d6",
+        "tab-bg": "rgba(120, 120, 128, 0.12)"
+    },
+    "dark": {
+        "bg-color": "#000000",
+        "text-color": "#f5f5f7",
+        "glass-bg": "rgba(30, 30, 32, 0.5)",
+        "glass-border": "rgba(255, 255, 255, 0.1)",
+        "glass-shadow": "rgba(0, 0, 0, 0.4)",
+        "shape-color-1": "#1c1c1e",
+        "shape-color-2": "#2c2c2e",
+        "tab-bg": "rgba(255, 255, 255, 0.12)"
+    }
+}

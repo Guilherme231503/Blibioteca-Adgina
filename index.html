@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Adgina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-1"></div>
+    <div class="bg-shape bg-shape-2"></div>
+    <div class="app-container">
+      <header class="glass interactive-glass">
+        <div class="brand">
+          <img src="logo.png" alt="Logo" class="logo">
+          <h1 data-i18n="brand.title">Biblioteca Adgina</h1>
+        </div>
+        <nav class="nav-tabs" id="main-nav">
+          <div class="tab-indicator" id="tab-indicator"></div>
+          <a href="#" class="tab active" data-index="0" data-i18n="tab.home">Home</a>
+          <a href="#" class="tab" data-index="1" data-i18n="tab.talk">Talk</a>
+          <a href="#" class="tab" data-index="2" data-i18n="tab.workshop">Workshop</a>
+          <a href="#" class="tab admin-only hidden" data-index="3" id="tab-admin">
+            <i class="fas fa-shield-halved"></i> Admin </a>
+          <a href="#" class="tab teacher-only hidden" data-index="4" id="tab-teacher">
+            <i class="fas fa-chalkboard-user"></i> Painel </a>
+        </nav>
+        <div class="controls">
+          <button id="settings-toggle" class="icon-btn">
+            <i class="fas fa-gear"></i>
+          </button>
+          <button id="theme-toggle" class="icon-btn">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="user-toggle" class="icon-btn user-btn">
+            <i class="fas fa-user"></i>
+          </button>
+        </div>
+      </header>
+      <main class="main-content" id="swipe-container">
+        <div class="pages-wrapper" id="pages-wrapper" style="width: 500%;">
+          <div class="page" style="width:20%;" id="page-0">
+            <div class="category-tabs" id="category-tabs"></div>
+            <div class="books-grid" id="books-grid"></div>
+          </div>
+          <div class="page" style="width:20%;" id="page-1">
+            <div class="talk-toolbar">
+              <h2 class="talk-title">Talk</h2>
+              <button id="new-post-btn" class="primary-btn new-post-btn">
+                <i class="fas fa-plus"></i> Publicar </button>
+            </div>
+            <div class="talk-feed" id="talk-feed"></div>
+          </div>
+          <div class="page" style="width:20%;" id="page-2">
+            <div class="shop-header">
+              <div class="shop-user">
+                <img id="shop-avatar" class="shop-avatar" src="" alt="">
+                <div>
+                  <div class="shop-name" id="shop-name">Visitante</div>
+                  <div class="shop-coins">
+                    <i class="fas fa-coins"></i>
+                    <span id="shop-coins">0</span> moedas
+                  </div>
+                </div>
+              </div>
+              <button id="publish-item-btn" class="primary-btn hidden">
+                <i class="fas fa-upload"></i> Publicar </button>
+            </div>
+            <div class="shop-filters" id="shop-filters">
+              <button class="filter-tab active" data-filter="all">Todos</button>
+              <button class="filter-tab" data-filter="theme">Temas</button>
+              <button class="filter-tab" data-filter="plugin">Plugins</button>
+              <button class="filter-tab" data-filter="ugc">UGC</button>
+              <button class="filter-tab" data-filter="unofficial">Unofficial</button>
+            </div>
+            <div class="themes-grid" id="themes-grid"></div>
+          </div>
+          <div class="page admin-only hidden" style="width:20%;" id="page-3">
+            <h2 class="talk-title">Painel Admin</h2>
+            <div class="admin-tabs">
+              <button class="admin-tab active" data-tab="queue">Solicitações</button>
+              <button class="admin-tab" data-tab="items">Itens</button>
+              <button class="admin-tab" data-tab="alerts">Alertas</button>
+              <button class="admin-tab owner-only hidden" data-tab="give-coins">Give free coins</button>
+            </div>
+            <div id="admin-content"></div>
+          </div>
+          <div class="page teacher-only hidden" style="width:20%;" id="page-4">
+            <h2 class="talk-title">Painel do Professor</h2>
+            <div id="teacher-content"></div>
+          </div>
+        </div>
+      </main>
+      <footer class="glass interactive-glass">
+        <p data-i18n="footer.copyright">&copy; 2026 Adgina. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+    
+    <div class="modal-overlay" id="settings-modal">
+      <div class="modal glass">
+        <div class="modal-header">
+          <h2 data-i18n="settings.title">Configurações</h2>
+          <button class="icon-btn modal-close" data-close="settings-modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="setting-row">
+            <div class="setting-label">
+              <i class="fas fa-music"></i>
+              <span>Música de fundo</span>
+            </div>
+            <label class="toggle">
+              <input type="checkbox" id="music-toggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="setting-row">
+            <div class="setting-label">
+              <i class="fas fa-volume-high"></i>
+              <span>Volume</span>
+            </div>
+            <input type="range" id="volume-range" min="0" max="1" step="0.05" value="0.4" class="volume-slider">
+          </div>
+          <div class="setting-row">
+            <div class="setting-label">
+              <i class="fas fa-palette"></i>
+              <span>Tema ativo</span>
+            </div>
+            <select id="theme-select" class="theme-select"></select>
+          </div>
+          <div class="setting-divider"></div>
+          <div class="setting-row">
+            <div class="setting-label">
+              <i class="fas fa-code"></i>
+              <div>
+                <div>Solicitar conta <strong>Developer</strong>
+                </div>
+                <div class="setting-hint">Envia seu item para aprovação de um admin.</div>
+              </div>
+            </div>
+            <button id="request-dev-btn" class="primary-btn small">Solicitar</button>
+          </div>
+          <div class="dev-status" id="dev-status"></div>
+          <div class="setting-row">
+            <div class="setting-label">
+              <i class="fas fa-image-portrait"></i>
+              <span>Moldura de perfil</span>
+            </div>
+            <button id="unequip-frame" class="primary-btn small">Remover</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal-overlay" id="login-modal">
+      <div class="modal glass">
+        <div class="modal-header">
+          <h2>Entrar / Criar Conta</h2>
+          <button class="icon-btn modal-close" data-close="login-modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="avatar-picker">
+            <img id="avatar-preview" class="avatar-preview" src="" alt="">
+            <label class="avatar-btn">
+              <i class="fas fa-camera"></i>
+              <input type="file" id="avatar-input" accept="image/*" hidden>
+            </label>
+          </div>
+          <input type="text" id="login-name" class="input" placeholder="Nome">
+          <input type="email" id="login-email" class="input" placeholder="Email">
+          <input type="password" id="login-password" class="input" placeholder="Senha">
+          <button id="login-submit" class="primary-btn">Entrar</button>
+          <p class="login-error" id="login-error"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal-overlay" id="post-modal">
+      <div class="modal glass modal-wide">
+        <div class="modal-header">
+          <h2>Novo post</h2>
+          <button class="icon-btn modal-close" data-close="post-modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="editor-toolbar" id="editor-toolbar">
+            <button type="button" class="editor-btn" data-cmd="bold">
+              <i class="fas fa-bold"></i>
+            </button>
+            <button type="button" class="editor-btn" data-cmd="italic">
+              <i class="fas fa-italic"></i>
+            </button>
+            <button type="button" class="editor-btn" data-cmd="underline">
+              <i class="fas fa-underline"></i>
+            </button>
+            <button type="button" class="editor-btn" data-cmd="strikeThrough">
+              <i class="fas fa-strikethrough"></i>
+            </button>
+            <span class="editor-sep"></span>
+            <button type="button" class="editor-btn" data-cmd="formatBlock" data-arg="h2">
+              <i class="fas fa-heading"></i>
+            </button>
+            <button type="button" class="editor-btn" data-cmd="insertUnorderedList">
+              <i class="fas fa-list-ul"></i>
+            </button>
+            <span class="editor-sep"></span>
+            <button type="button" class="editor-btn" id="link-btn">
+              <i class="fas fa-link"></i>
+            </button>
+            <label class="editor-btn">
+              <i class="fas fa-image"></i>
+              <input type="file" id="media-image" accept="image/*" hidden multiple>
+            </label>
+            <label class="editor-btn">
+              <i class="fas fa-video"></i>
+              <input type="file" id="media-video" accept="video/*" hidden>
+            </label>
+            <label class="editor-btn">
+              <i class="fas fa-paperclip"></i>
+              <input type="file" id="media-file" hidden>
+            </label>
+          </div>
+          <div id="editor" class="editor" contenteditable="true" data-placeholder="O que está acontecendo?"></div>
+          <div class="media-preview" id="media-preview"></div>
+          <div class="editor-actions">
+            <label class="toggle-label">
+              <input type="checkbox" id="preview-toggle">
+              <span>Preview</span>
+            </label>
+            <button id="post-submit" class="primary-btn" disabled>Publicar</button>
+          </div>
+          <div id="post-preview" class="post-preview hidden"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal-overlay" id="publish-modal">
+      <div class="modal glass modal-wide">
+        <div class="modal-header">
+          <h2>Publicar item no Workshop</h2>
+          <button class="icon-btn modal-close" data-close="publish-modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <select id="pub-type" class="input">
+            <option value="plugin">Plugin (JavaScript)</option>
+            <option value="ugc">UGC (pack de módulos)</option>
+            <option value="unofficial">Unofficial</option>
+            <option value="theme">Tema</option>
+          </select>
+          <input type="text" id="pub-id" class="input" placeholder="ID único">
+          <input type="text" id="pub-name" class="input" placeholder="Nome exibido">
+          <input type="text" id="pub-desc" class="input" placeholder="Descrição curta">
+          <input type="number" id="pub-price" class="input" placeholder="Preço em moedas" value="50">
+          <div id="ugc-fields" class="hidden">
+            <div class="setting-label" style="margin-top:10px;">Módulos UGC (marque os que o pack inclui):</div>
+            <label class="checkbox-row">
+              <input type="checkbox" value="profile-photo" class="ugc-mod"> Foto de perfil </label>
+            <label class="checkbox-row">
+              <input type="checkbox" value="animated-background" class="ugc-mod"> Background animado </label>
+            <label class="checkbox-row">
+              <input type="checkbox" value="animated-profile" class="ugc-mod"> Perfil animado </label>
+            <label class="checkbox-row">
+              <input type="checkbox" value="profile-photo" class="ugc-mod"> Foto de perfil </label>
+            <label class="checkbox-row">
+              <input type="checkbox" value="animated-background" class="ugc-mod"> Background animado </label>
+            <label class="checkbox-row">
+              <input type="checkbox" value="animated-profile" class="ugc-mod"> Perfil animado </label>
+            <label class="checkbox-row">
+              <input type="checkbox" value="profile-frame" class="ugc-mod"> Molduras de foto de perfil </label>
+            <div id="frame-upload-wrap" class="hidden" style="margin-top:10px;">
+              <div class="setting-label" style="margin-bottom:6px;">
+                <i class="fas fa-image"></i> Imagem da moldura (PNG transparente recomendado)
+              </div>
+              <input type="file" id="pub-frame-image" accept="image/png,image/webp,image/jpeg,image/gif,image/svg+xml" class="input">
+              <p class="login-error" id="pub-frame-info"></p>
+            </div>
+          </div>
+          <textarea id="pub-code" class="input code-area" placeholder="Código JS (plugins)" rows="6"></textarea>
+          <div class="setting-divider"></div>
+          <div class="setting-label" style="margin-bottom:6px;">
+            <i class="fas fa-file-zipper"></i> Ou envie um <strong>.zip</strong> com <code>manifest.json</code>
+          </div>
+          <input type="file" id="pub-zip" accept=".zip,application/zip" class="input">
+          <p class="login-error" id="pub-zip-info"></p>
+          <button id="pub-submit" class="primary-btn">Enviar para aprovação</button>
+          <p class="login-error" id="pub-error"></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal-overlay" id="comments-modal">
+      <div class="modal glass modal-wide">
+        <div class="modal-header">
+          <h2>Comentários</h2>
+          <button class="icon-btn modal-close" data-close="comments-modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="comments-list" id="comments-list"></div>
+          <div class="comment-editor">
+            <div id="comment-editor" class="editor comment-editor-box" contenteditable="true" data-placeholder="Escreva um comentário..."></div>
+            <button id="comment-submit" class="primary-btn" disabled>Comentar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="context-menu glass" id="context-menu">
+      <button class="context-item danger" id="ctx-delete-post">
+        <i class="fas fa-trash"></i> Apagar post </button>
+      <button class="context-item" id="ctx-cancel">
+        <i class="fas fa-xmark"></i> Cancelar </button>
+    </div>
+    
+    <div class="pdf-viewer hidden" id="pdf-viewer">
+      <div class="pdf-toolbar glass">
+        <button class="pdf-btn" id="pdf-back">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+        <div class="pdf-title" id="pdf-title">Documento</div>
+          <div class="pdf-read-stats" aria-live="polite">
+            <span><i class="fas fa-clock"></i> <span id="pdf-reading-time">00:00</span></span>
+            <span><i class="fas fa-coins"></i> <span id="pdf-earned-coins">+0</span></span>
+          </div>
+        <div class="pdf-controls">
+          <button class="pdf-btn" id="pdf-zoom-out" title="Zoom -">
+            <i class="fas fa-magnifying-glass-minus"></i>
+          </button>
+          <span class="pdf-zoom-label" id="pdf-zoom-label">100%</span>
+          <button class="pdf-btn" id="pdf-zoom-in" title="Zoom +">
+            <i class="fas fa-magnifying-glass-plus"></i>
+          </button>
+          <button class="pdf-btn" id="pdf-prev" title="Anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <span class="pdf-page-label" id="pdf-page-label">1 / 1</span>
+          <button class="pdf-btn" id="pdf-next" title="Próxima">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <button class="pdf-btn" id="pdf-fullscreen" title="Fullscreen">
+            <i class="fas fa-expand"></i>
+          </button>
+        </div>
+      </div>
+      <div class="pdf-canvas-wrap" id="pdf-canvas-wrap"></div>
+      <div class="pdf-hint">Atalhos: ← → navegar · + − zoom · F fullscreen · ESC fechar</div>
+    </div>
+    
+    <div class="toast-container" id="toast-container"></div>
+    
+    <div class="modal-overlay" id="alert-popup-modal">
+      <div class="modal glass">
+        <div class="modal-header">
+          <h2 id="alert-popup-title">Aviso</h2>
+          <button class="icon-btn modal-close" data-close="alert-popup-modal">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+        <div class="modal-body" id="alert-popup-body"></div>
+      </div>
+    </div>
+    <audio id="bg-music" loop></audio>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

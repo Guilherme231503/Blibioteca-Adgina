@@ -1,0 +1,9 @@
+{
+    "background": "background.png",
+    "music": "default.mp3",
+    "select": "select.mp3",
+    "dark_mode_default": false,
+    "blur_strength": 50,
+    "border_radius": 24,
+    "shape_blur": 80
+}
