@@ -2414,15 +2414,119 @@ const updateUserUI = () => {
         const container = document.getElementById("teacher-content");
         container.innerHTML = `<div class="empty-state"><i class="fas fa-spinner fa-spin empty-icon"></i></div>`;
         if (!state.user) return;
+
         const r = await fetch(`/api/activity/all?email=${encodeURIComponent(state.user.email)}`);
         if (!r.ok) {
             container.innerHTML = `<div class="empty-state">Sem permissão.</div>`;
             return;
         }
         const students = await r.json();
+
+        const uploadCard = document.createElement("div");
+        uploadCard.className = "teacher-upload-card";
+        uploadCard.innerHTML = `
+            <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;">
+                <h3 style="margin:0;">Adicionar livro</h3>
+            </div>
+            <form id="book-upload-form" style="display:grid;gap:14px;">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;">
+                    <label style="display:grid;gap:6px;font-size:0.85rem;opacity:0.8;">
+                        Categoria
+                        <input name="category" type="text" value="Geral" class="input" />
+                    </label>
+                    <label style="display:grid;gap:6px;font-size:0.85rem;opacity:0.8;">
+                        Nome do livro
+                        <input name="name" type="text" placeholder="Ex.: A Revolta" class="input" required />
+                    </label>
+                    <label style="display:grid;gap:6px;font-size:0.85rem;opacity:0.8;">
+                        Autor
+                        <input name="author" type="text" placeholder="Ex.: Maria Souza" class="input" required />
+                    </label>
+                    <label style="display:grid;gap:6px;font-size:0.85rem;opacity:0.8;">
+                        Moedas por minuto
+                        <input name="coinsPerMinute" type="number" min="0" step="1" value="2" class="input" required />
+                    </label>
+                </div>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;">
+                    <label style="display:grid;gap:6px;font-size:0.85rem;opacity:0.8;">
+                        Capa
+                        <input name="cover" type="file" accept="image/*" class="input" required />
+                    </label>
+                    <label style="display:grid;gap:6px;font-size:0.85rem;opacity:0.8;">
+                        PDF
+                        <input name="pdf" type="file" accept="application/pdf" class="input" required />
+                    </label>
+                </div>
+                <div style="display:flex;justify-content:flex-end;">
+                    <button type="submit" class="primary-btn"><i class="fas fa-upload"></i> Salvar livro</button>
+                </div>
+            </form>
+        `;
+
+        const form = uploadCard.querySelector("#book-upload-form");
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+            const formData = new FormData(form);
+            const cover = formData.get("cover");
+            const pdf = formData.get("pdf");
+            const name = String(formData.get("name") || "").trim();
+            const author = String(formData.get("author") || "").trim();
+            const category = String(formData.get("category") || "Geral").trim();
+            const coinsPerMinute = Number(formData.get("coinsPerMinute")) || 2;
+
+            if (!cover || !pdf || !name || !author) {
+                showToast({ type: 'danger', title: 'Dados incompletos', html: 'Preencha capa, PDF, nome e autor.' });
+                return;
+            }
+
+            const toDataUrl = file => new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = () => reject(new Error('Falha ao ler arquivo.'));
+                reader.readAsDataURL(file);
+            });
+
+            try {
+                const payload = {
+                    email: state.user.email,
+                    category,
+                    name,
+                    author,
+                    coinsPerMinute,
+                    cover: { name: cover.name, dataUrl: await toDataUrl(cover) },
+                    pdf: { name: pdf.name, dataUrl: await toDataUrl(pdf) }
+                };
+
+                const response = await fetch('/api/books/upload', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const result = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(result.error || 'Erro ao salvar livro.');
+                }
+
+                showToast({ type: 'success', title: 'Livro salvo', html: `${result.book.name} foi adicionado.` });
+                form.reset();
+                const coinsField = form.querySelector('[name="coinsPerMinute"]');
+                if (coinsField) coinsField.value = 2;
+                fetchBooks();
+                loadTeacherPanel();
+            } catch (error) {
+                showToast({ type: 'danger', title: 'Erro', html: error.message });
+            }
+        });
+
         container.innerHTML = "";
+        container.appendChild(uploadCard);
+
         if (!students.length) {
-            container.innerHTML = `<div class="empty-state">Sem alunos.</div>`;
+            const empty = document.createElement("div");
+            empty.className = "empty-state";
+            empty.innerHTML = "<span>Sem alunos.</span>";
+            container.appendChild(empty);
             return;
         }
 

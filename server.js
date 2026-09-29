@@ -23,6 +23,7 @@ const UGC_DIR = path.join(WORKSHOP_DIR, 'ugc');
 const TALK_DIR = path.join(__dirname, 'talk');
 const TALK_FILE = path.join(TALK_DIR, 'posts.json');
 const UPLOADS_DIR = path.join(TALK_DIR, 'uploads');
+const BOOKS_DIR = path.join(__dirname, 'books');
 const FRAMES_DIR = path.join(__dirname, 'workshop', 'frames');
 const DEVREQ_FILE = path.join(__dirname, 'devrequests.json');
 const ALERTS_FILE = path.join(__dirname, 'alerts.json');
@@ -35,7 +36,7 @@ const SESSION_MAX_AGE = 7 * 24 * 60 * 60 * 1000;
 // ---------- SETUP ----------
 function ensureDirs() {
     [USERS_DIR, THEMES_DIR, WORKSHOP_DIR, PLUGINS_DIR, UNOFFICIAL_DIR, UGC_DIR,
-     TALK_DIR, UPLOADS_DIR, FRAMES_DIR].forEach(d => {
+     TALK_DIR, UPLOADS_DIR, BOOKS_DIR, FRAMES_DIR].forEach(d => {
         if (!fs.existsSync(d)) fs.mkdirSync(d, { recursive: true });
     });
     const files = [
@@ -799,6 +800,68 @@ app.delete('/api/posts/:postId/comments/:commentId', (req, res) => {
 });
 
 // ---------- UPLOAD ----------
+function slugifyBookName(value) {
+    return String(value || '')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .trim()
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .slice(0, 80) || 'livro';
+}
+
+app.post('/api/books/upload', (req, res) => {
+    const { email, category, name, author, coinsPerMinute, cover, pdf } = req.body;
+    if (!email || !name || !author || !cover || !pdf) {
+        return res.status(400).json({ error: 'Preencha capa, PDF, nome e autor.' });
+    }
+
+    const db = readJSON(USERS_FILE, { users: [] });
+    const user = db.users.find(u => u.email === email);
+    if (!user || (!isTeacher(user.accountType) && !isAdmin(user.accountType))) {
+        return res.status(403).json({ error: 'Sem permissão para adicionar livros.' });
+    }
+
+    const safeCategory = String(category || 'Geral').replace(/[<>:"/\\|?*]/g, '').trim() || 'Geral';
+    const safeName = String(name).trim();
+    const safeAuthor = String(author).trim();
+    const value = Number(coinsPerMinute) || 2;
+
+    const baseDir = path.join(BOOKS_DIR, safeCategory);
+    fs.mkdirSync(baseDir, { recursive: true });
+
+    const slug = slugifyBookName(safeName);
+    const bookDir = path.join(baseDir, slug);
+    if (fs.existsSync(bookDir)) {
+        return res.status(409).json({ error: 'Já existe um livro com esse nome nesta categoria.' });
+    }
+    fs.mkdirSync(bookDir, { recursive: true });
+
+    const coverMatch = String(cover.dataUrl || '').match(/^data:(image\/(png|jpeg|jpg|webp|gif|svg\+xml));base64,(.+)$/i);
+    const pdfMatch = String(pdf.dataUrl || '').match(/^data:(application\/pdf);base64,(.+)$/i);
+    if (!coverMatch || !pdfMatch) {
+        fs.rmSync(bookDir, { recursive: true, force: true });
+        return res.status(400).json({ error: 'Capa deve ser uma imagem e PDF deve ser válido.' });
+    }
+
+    const coverExt = (cover.name || 'cover.png').split('.').pop().toLowerCase();
+    const coverSafeExt = ['png', 'jpg', 'jpeg', 'webp', 'gif', 'svg'].includes(coverExt) ? coverExt : 'png';
+    const pdfExt = (pdf.name || 'book.pdf').split('.').pop().toLowerCase() === 'pdf' ? 'pdf' : 'pdf';
+
+    fs.writeFileSync(path.join(bookDir, `cover.${coverSafeExt}`), Buffer.from(coverMatch[3], 'base64'));
+    fs.writeFileSync(path.join(bookDir, `book.${pdfExt}`), Buffer.from(pdfMatch[2], 'base64'));
+
+    const manifest = {
+        name: safeName,
+        author: safeAuthor,
+        coinsPerMinute: value
+    };
+    fs.writeFileSync(path.join(bookDir, 'manifest.json'), JSON.stringify(manifest, null, 2));
+
+    res.json({ success: true, category: safeCategory, folder: slug, book: manifest });
+});
+
 app.post('/api/upload', (req, res) => {
     const { filename, dataUrl } = req.body;
     if (!filename || !dataUrl) return res.status(400).json({ error: 'Dados inválidos.' });
