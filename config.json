@@ -8,11 +8,11 @@
       "default"
     ],
     "equippedFrame": null,
-    "accountType": "teacher",
+    "accountType": "owner",
     "devRequested": false,
     "isDev": true,
-    "isAdmin": false,
-    "isOwner": false
+    "isAdmin": true,
+    "isOwner": true
   },
   "theme": "default",
   "music": true,

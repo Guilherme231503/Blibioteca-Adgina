@@ -18,22 +18,22 @@
         </div>
         <nav class="nav-tabs" id="main-nav">
           <div class="tab-indicator" id="tab-indicator"></div>
-          <a href="#" class="tab active" data-index="0" data-i18n="tab.home">Home</a>
-          <a href="#" class="tab" data-index="1" data-i18n="tab.talk">Talk</a>
-          <a href="#" class="tab" data-index="2" data-i18n="tab.workshop">Workshop</a>
+          <a href="#" class="tab active" data-index="0" title="Home" aria-label="Home"><i class="fas fa-house"></i><span data-i18n="tab.home">Home</span></a>
+          <a href="#" class="tab" data-index="1" title="Talk" aria-label="Talk"><i class="fas fa-comments"></i><span data-i18n="tab.talk">Talk</span></a>
+          <a href="#" class="tab" data-index="2" title="Workshop" aria-label="Workshop"><i class="fas fa-store"></i><span data-i18n="tab.workshop">Workshop</span></a>
           <a href="#" class="tab admin-only hidden" data-index="3" id="tab-admin">
-            <i class="fas fa-shield-halved"></i> Admin </a>
+            <i class="fas fa-shield-halved"></i><span>Admin</span></a>
           <a href="#" class="tab teacher-only hidden" data-index="4" id="tab-teacher">
-            <i class="fas fa-chalkboard-user"></i> Painel </a>
+            <i class="fas fa-chalkboard-user"></i><span>Painel</span></a>
         </nav>
         <div class="controls">
-          <button id="settings-toggle" class="icon-btn">
+          <button id="settings-toggle" class="icon-btn" title="Configurações" aria-label="Configurações">
             <i class="fas fa-gear"></i>
           </button>
-          <button id="theme-toggle" class="icon-btn">
+          <button id="theme-toggle" class="icon-btn" title="Alternar tema" aria-label="Alternar tema">
             <i class="fas fa-moon"></i>
           </button>
-          <button id="user-toggle" class="icon-btn user-btn">
+          <button id="user-toggle" class="icon-btn user-btn" title="Conta" aria-label="Conta">
             <i class="fas fa-user"></i>
           </button>
         </div>
@@ -322,13 +322,13 @@
     
     <div class="pdf-viewer hidden" id="pdf-viewer">
       <div class="pdf-toolbar glass">
-        <button class="pdf-btn" id="pdf-back">
+        <button class="pdf-btn" id="pdf-back" title="Voltar à biblioteca" aria-label="Voltar à biblioteca">
           <i class="fas fa-arrow-left"></i>
         </button>
         <div class="pdf-title" id="pdf-title">Documento</div>
           <div class="pdf-read-stats" aria-live="polite">
-            <span><i class="fas fa-clock"></i> <span id="pdf-reading-time">00:00</span></span>
-            <span><i class="fas fa-coins"></i> <span id="pdf-earned-coins">+0</span></span>
+            <span title="Tempo de leitura"><i class="fas fa-clock"></i> <span id="pdf-reading-time">00:00</span></span>
+            <span title="Moedas conquistadas"><i class="fas fa-coins"></i> <span id="pdf-earned-coins">+0</span></span>
           </div>
         <div class="pdf-controls">
           <button class="pdf-btn" id="pdf-zoom-out" title="Zoom -">

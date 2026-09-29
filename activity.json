@@ -1891,13 +1891,91 @@
           "bookFolder": null,
           "seconds": 0,
           "date": "2026-09-25T19:09:11.635Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-29T19:52:06.080Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-29T19:52:06.145Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 26,
+          "date": "2026-09-29T19:52:32.200Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-29T19:52:32.213Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "a-parte-que-falta-em-mim",
+          "seconds": 3,
+          "date": "2026-09-29T19:52:39.137Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-29T19:52:40.124Z"
+        },
+        {
+          "event": "hidden",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-29T19:52:40.948Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 29,
+          "date": "2026-09-29T19:53:09.703Z"
+        },
+        {
+          "event": "visible",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-29T19:53:09.727Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-29T19:53:16.495Z"
+        },
+        {
+          "event": "focus",
+          "bookFolder": null,
+          "seconds": 13,
+          "date": "2026-09-29T19:53:30.227Z"
+        },
+        {
+          "event": "read-time",
+          "bookFolder": "vidas-secas",
+          "seconds": 1,
+          "date": "2026-09-29T19:53:53.020Z"
+        },
+        {
+          "event": "blur",
+          "bookFolder": null,
+          "seconds": 0,
+          "date": "2026-09-29T19:53:55.192Z"
         }
       ],
       "totals": {
         "cronicas-de-narnia-volume-unico": 384,
-        "a-parte-que-falta-em-mim": 26,
+        "a-parte-que-falta-em-mim": 29,
         "extraordinario": 38,
-        "vidas-secas": 1,
+        "vidas-secas": 2,
         "harry-potter-e-a-pedra-filosofa": 7,
         "harry-potter-e-a-camara-secreta": 8,
         "harry-potter-e-o-prisioneiro-de-azkaban": 7,
@@ -1905,7 +1983,7 @@
         "harry-potter-e-o-calice-de-fogo": 6,
         "harry-potter-e-as-reliquias-da-morte": 4
       },
-      "lastSeen": "2026-09-25T19:09:11.635Z"
+      "lastSeen": "2026-09-29T19:53:55.192Z"
     }
   }
 }

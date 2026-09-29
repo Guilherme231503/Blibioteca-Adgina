@@ -175,11 +175,21 @@ display: flex;
 gap: 10px;
 overflow-x: auto;
 padding-bottom: 20px;
+touch-action: pan-x;
+overscroll-behavior-x: contain;
+-webkit-overflow-scrolling: touch;
+scrollbar-width: thin;
+scrollbar-color: var(--shape-color-2) transparent;
 }
 .category-tabs::-webkit-scrollbar {
-display: none;
+height: 4px;
+}
+.category-tabs::-webkit-scrollbar-thumb {
+background: var(--shape-color-2);
+border-radius: 4px;
 }
 .cat-tab {
+flex: 0 0 auto;
 background: var(--tab-bg);
 border: none;
 color: var(--text-color);
@@ -1652,4 +1662,350 @@ width: 120px;
 height: 120px;
 object-fit: contain;
 pointer-events: none;
+}
+.dialog-modal {
+max-width: 440px;
+}
+.dialog-body p {
+margin: 0 0 12px;
+line-height: 1.5;
+}
+.dialog-body .input {
+width: 100%;
+box-sizing: border-box;
+}
+.dialog-actions {
+display: flex;
+justify-content: flex-end;
+gap: 10px;
+padding: 0 24px 24px;
+}
+.dialog-actions .primary-btn,
+.dialog-cancel {
+min-width: 96px;
+}
+.dialog-cancel {
+background: var(--tab-bg);
+color: var(--text-color);
+border: 1px solid var(--glass-border);
+border-radius: 12px;
+padding: 10px 14px;
+font: inherit;
+font-weight: 600;
+cursor: pointer;
+transition: transform 180ms ease, background 180ms ease;
+}
+.dialog-cancel:hover {
+background: var(--glass-border);
+transform: translateY(-2px);
+}
+@media (hover: hover) and (pointer: fine) {
+button,
+.tab,
+.cat-tab,
+.filter-tab,
+.book-card,
+.theme-card,
+.post-card,
+.admin-card {
+transition: transform 180ms ease, box-shadow 220ms ease, background-color 180ms ease;
+}
+.icon-btn:hover,
+.pdf-btn:hover {
+transform: translateY(-2px);
+}
+.tab:hover,
+.cat-tab:hover,
+.filter-tab:hover {
+transform: translateY(-1px);
+}
+.post-action:hover,
+.admin-actions button:hover {
+transform: translateY(-2px) scale(1.03);
+}
+}
+@media (max-width: 900px) {
+.app-container {
+width: min(96%, 760px);
+}
+header {
+gap: 12px;
+padding: 12px 16px;
+}
+.brand {
+gap: 8px;
+}
+.logo {
+height: 38px;
+}
+h1 {
+font-size: 1.05rem;
+}
+.tab {
+padding: 7px 11px;
+font-size: 0.85rem;
+}
+.page {
+padding: 18px 20px;
+}
+.books-grid {
+grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+gap: 16px;
+}
+}
+@media (max-width: 640px) {
+body {
+height: 100dvh;
+min-height: 100dvh;
+align-items: stretch;
+overflow: hidden;
+}
+.app-container {
+width: 100%;
+height: 100dvh;
+min-height: 0;
+padding: max(7px, env(safe-area-inset-top)) 8px max(7px, env(safe-area-inset-bottom));
+box-sizing: border-box;
+gap: 8px;
+}
+.glass {
+border-radius: 17px;
+}
+header {
+height: auto;
+min-height: 54px;
+padding: 7px 9px;
+gap: 7px;
+border-radius: 17px;
+}
+.brand {
+flex: 0 0 auto;
+}
+.logo {
+width: 32px;
+height: 32px;
+}
+h1 {
+display: none;
+}
+.nav-tabs {
+flex: 1 1 auto;
+min-width: 0;
+justify-content: space-around;
+padding: 4px;
+border-radius: 14px;
+touch-action: manipulation;
+}
+.tab {
+width: 38px;
+height: 38px;
+padding: 0;
+border-radius: 10px;
+font-size: 1rem;
+}
+.tab span {
+display: none;
+}
+.tab i {
+line-height: 1;
+}
+.tab.admin-only,
+.tab.teacher-only {
+padding: 0;
+}
+.controls {
+gap: 3px;
+}
+.icon-btn {
+width: 36px;
+height: 36px;
+border-radius: 11px;
+}
+.user-btn .avatar-wrap,
+.user-btn img.avatar-base {
+width: 27px !important;
+height: 27px !important;
+}
+.main-content {
+min-height: 0;
+border-radius: 17px;
+touch-action: pan-y;
+}
+.page {
+padding: 14px 12px 20px;
+}
+.category-tabs {
+gap: 8px;
+padding: 2px 1px 14px;
+}
+.cat-tab {
+flex: 0 0 auto;
+padding: 9px 13px;
+font-size: 0.82rem;
+}
+.books-grid {
+grid-template-columns: repeat(auto-fill, minmax(112px, 1fr));
+gap: 11px;
+padding-bottom: 24px;
+}
+.book-card {
+padding: 8px;
+gap: 7px;
+border-radius: 12px;
+}
+.book-title {
+font-size: 0.82rem;
+}
+footer {
+display: none;
+}
+.shop-header {
+margin-bottom: 14px;
+}
+.shop-avatar-wrap,
+.shop-avatar-wrap img.avatar-base {
+width: 42px !important;
+height: 42px !important;
+}
+.shop-user {
+gap: 9px;
+min-width: 0;
+}
+.shop-name {
+max-width: 45vw;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 0.88rem;
+}
+.shop-coins {
+font-size: 0.76rem;
+}
+.shop-filters {
+gap: 7px;
+overflow-x: auto;
+}
+.filter-tab {
+flex: 0 0 auto;
+padding: 8px 11px;
+font-size: 0.78rem;
+}
+.talk-toolbar {
+gap: 8px;
+}
+.talk-title {
+font-size: 1.15rem;
+}
+.new-post-btn {
+width: 40px;
+height: 40px;
+padding: 0;
+font-size: 0;
+}
+.new-post-btn i {
+font-size: 1rem;
+}
+.modal-overlay {
+padding: 12px;
+}
+.modal {
+width: 100%;
+max-height: calc(100dvh - 24px);
+overflow-y: auto;
+border-radius: 18px;
+}
+.modal-header,
+.modal-body {
+padding-left: 16px;
+padding-right: 16px;
+}
+.dialog-actions {
+padding: 0 16px 16px;
+}
+.toast-container {
+left: 10px;
+right: 10px;
+bottom: max(10px, env(safe-area-inset-bottom));
+max-width: none;
+}
+.toast {
+padding: 12px;
+}
+.pdf-toolbar {
+top: max(7px, env(safe-area-inset-top));
+left: 7px;
+right: 7px;
+display: flex;
+flex-wrap: wrap;
+gap: 4px;
+padding: 5px 7px;
+min-height: 0;
+}
+.pdf-title {
+flex: 1 1 80px;
+max-width: none;
+font-size: 0.75rem;
+}
+.pdf-read-stats {
+gap: 7px;
+font-size: 0.68rem;
+}
+.pdf-controls {
+width: 100%;
+justify-content: space-between;
+gap: 2px;
+}
+.pdf-btn {
+flex: 0 0 36px;
+width: 36px;
+height: 36px;
+font-size: 0.9rem;
+}
+.pdf-zoom-label,
+.pdf-page-label {
+min-width: 34px;
+font-size: 0.68rem;
+}
+.pdf-canvas-wrap {
+padding: 98px 4px 8px;
+}
+#pdf-flipbook {
+width: 100%;
+height: 100%;
+}
+.pdf-hint {
+display: none;
+}
+}
+@media (max-width: 380px) {
+.brand {
+display: none;
+}
+.pdf-read-stats > span:first-child {
+display: none;
+}
+.pdf-title {
+flex-basis: 60px;
+}
+.pdf-btn {
+flex-basis: 32px;
+width: 32px;
+}
+.pdf-zoom-label,
+.pdf-page-label {
+min-width: 28px;
+}
+.books-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+@media (prefers-reduced-motion: reduce) {
+*,
+*::before,
+*::after {
+scroll-behavior: auto !important;
+animation-duration: 0.01ms !important;
+animation-iteration-count: 1 !important;
+transition-duration: 0.01ms !important;
+}
 }

@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const PLACEHOLDER_COVER_THEME = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(
         `<svg xmlns='http://www.w3.org/2000/svg' width='200' height='125'><rect width='100%' height='100%' fill='#888'/></svg>`
     );
+    const CONFIG_STORAGE_KEY = 'bibliotecaAdgina.config';
 
     
     const frameCache = {};
@@ -691,6 +692,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggleBtn.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
         const isDark = document.body.classList.contains("dark-mode");
+        saveConfig({ darkMode: isDark });
         gsap.to(themeIcon, {
             rotation: 180,
             opacity: 0,
@@ -797,6 +799,97 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     window.showToast = showToast;
 
+    function showDialog({
+        type = 'alert',
+        title = 'Aviso',
+        message = '',
+        value = '',
+        placeholder = '',
+        inputType = 'text',
+        confirmText = 'OK',
+        cancelText = 'Cancelar'
+    }) {
+        return new Promise(resolve => {
+            const overlay = document.createElement('div');
+            overlay.className = 'modal-overlay open';
+            overlay.setAttribute('role', 'presentation');
+            const modal = document.createElement('section');
+            modal.className = 'modal glass dialog-modal';
+            modal.setAttribute('role', 'dialog');
+            modal.setAttribute('aria-modal', 'true');
+            const heading = document.createElement('h2');
+            heading.textContent = title;
+            const body = document.createElement('div');
+            body.className = 'modal-body dialog-body';
+            const text = document.createElement('p');
+            text.textContent = message;
+            body.appendChild(text);
+
+            let input;
+            if (type === 'prompt') {
+                input = document.createElement(inputType === 'textarea' ? 'textarea' : 'input');
+                if (input.tagName === 'INPUT') input.type = inputType;
+                input.className = 'input';
+                input.value = value ?? '';
+                input.placeholder = placeholder;
+                input.setAttribute('aria-label', title);
+                body.appendChild(input);
+            }
+
+            const header = document.createElement('div');
+            header.className = 'modal-header';
+            header.appendChild(heading);
+            const actions = document.createElement('div');
+            actions.className = 'dialog-actions';
+            let onKeydown;
+            const finish = result => {
+                document.removeEventListener('keydown', onKeydown);
+                overlay.remove();
+                resolve(result);
+            };
+            if (type !== 'alert') {
+                const cancel = document.createElement('button');
+                cancel.className = 'dialog-cancel';
+                cancel.type = 'button';
+                cancel.textContent = cancelText;
+                cancel.addEventListener('click', () => finish(type === 'prompt' ? null : false));
+                actions.appendChild(cancel);
+            }
+            const confirm = document.createElement('button');
+            confirm.className = 'primary-btn';
+            confirm.type = 'button';
+            confirm.textContent = confirmText;
+            confirm.addEventListener('click', () => finish(type === 'prompt' ? input.value : true));
+            actions.appendChild(confirm);
+            modal.append(header, body, actions);
+            overlay.appendChild(modal);
+            overlay.addEventListener('click', event => {
+                if (event.target === overlay) finish(type === 'prompt' ? null : type === 'confirm' ? false : true);
+            });
+            onKeydown = event => {
+                if (event.key === 'Escape') finish(type === 'prompt' ? null : type === 'confirm' ? false : true);
+                if (event.key === 'Enter' && (!input || input.tagName !== 'TEXTAREA')) confirm.click();
+            };
+            document.addEventListener('keydown', onKeydown);
+            document.body.appendChild(overlay);
+            if (input) {
+                input.focus();
+                if (input.tagName === 'INPUT' && input.type !== 'number') input.select();
+            } else confirm.focus();
+        });
+    }
+
+    const showConfirm = (message, title = 'Confirmar') => showDialog({ type: 'confirm', title, message });
+    const showPrompt = (message, value = '', options = {}) => showDialog({
+        type: 'prompt',
+        title: options.title || 'Informe os dados',
+        message,
+        value,
+        placeholder: options.placeholder || '',
+        inputType: options.inputType || 'text',
+        confirmText: options.confirmText || 'Salvar'
+    });
+
     function showAlertPopup(alert) {
         document.getElementById("alert-popup-title").textContent = alert.title || 'Aviso';
         document.getElementById("alert-popup-body").innerHTML = alert.html || '';
@@ -840,9 +933,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const loadConfig = async () => {
         try {
-            const r = await fetch("/api/config");
-            state.config = await r.json();
+            const savedConfig = JSON.parse(localStorage.getItem(CONFIG_STORAGE_KEY) || '{}');
+            state.config = { ...state.config, ...savedConfig };
         } catch (e) {}
+        document.body.classList.toggle('dark-mode', !!state.config.darkMode);
+        themeIcon.className = state.config.darkMode ? 'fas fa-sun' : 'fas fa-moon';
         setAudioSource(state.config.theme || "default");
         bgMusic.volume = state.config.volume ?? 0.4;
         musicToggle.checked = !!state.config.music;
@@ -873,13 +968,7 @@ document.addEventListener("DOMContentLoaded", () => {
             ...patch
         };
         try {
-            await fetch("/api/config", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(patch)
-            });
+            localStorage.setItem(CONFIG_STORAGE_KEY, JSON.stringify(state.config));
         } catch (e) {}
     };
     musicToggle.addEventListener("change", async () => {
@@ -966,7 +1055,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.getElementById("user-toggle").addEventListener("click", () => {
         if (state.user) {
-            if (confirm("Deseja sair?")) logout();
+            showConfirm("Deseja sair?", "Sair da conta").then(confirmed => {
+                if (confirmed) logout();
+            });
         } else openModal("login-modal");
     });
     avatarInput.addEventListener("change", () => {
@@ -1003,6 +1094,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 return;
             }
             state.user = d.user;
+            await saveConfig({ loggedUser: state.user });
             updateUserUI();
             updateDevStatusUI();
             applyRoleUI();
@@ -1021,6 +1113,7 @@ document.addEventListener("DOMContentLoaded", () => {
             method: "POST"
         });
         state.user = null;
+        await saveConfig({ loggedUser: null });
         updateUserUI();
         updateDevStatusUI();
         applyRoleUI();
@@ -1470,8 +1563,10 @@ const updateUserUI = () => {
         else document.execCommand(b.dataset.cmd, false, null);
     }));
     document.getElementById("link-btn").addEventListener("click", () => {
-        const u = prompt("URL:");
-        if (u) document.execCommand("createLink", false, u);
+        showPrompt("Informe o endereço do link.", "", { title: "Inserir link", placeholder: "https://" })
+            .then(url => {
+                if (url) document.execCommand("createLink", false, url);
+            });
     });
 
     const fileToDataUrl = (f) => new Promise((res, rej) => {
@@ -1706,7 +1801,7 @@ const updateUserUI = () => {
                 del.title = "Apagar post";
                 del.addEventListener("click", async (ev) => {
                     ev.stopPropagation();
-                    if (!confirm("Apagar este post?")) return;
+                    if (!await showConfirm("Apagar este post?", "Remover publicação")) return;
                     const r = await fetch(`/api/posts/${post.id}`, {
                         method: "DELETE",
                         headers: {
@@ -2046,6 +2141,10 @@ const updateUserUI = () => {
     }
 
     async function moderateRequest(id, action) {
+        const reason = action === 'reject'
+            ? await showPrompt("Informe o motivo da rejeição (opcional).", "", { title: "Rejeitar solicitação" })
+            : '';
+        if (reason === null) return;
         const r = await fetch(`/api/pubrequests/${id}/${action}`, {
             method: "POST",
             headers: {
@@ -2053,7 +2152,7 @@ const updateUserUI = () => {
             },
             body: JSON.stringify({
                 email: state.user.email,
-                reason: action === 'reject' ? prompt("Motivo (opcional):") || '' : ''
+                reason: reason || ''
             })
         });
         const d = await r.json();
@@ -2094,9 +2193,9 @@ const updateUserUI = () => {
             editBtn.className = "neutral";
             editBtn.innerHTML = `<i class="fas fa-pen"></i> Editar nome/preço`;
             editBtn.addEventListener("click", async () => {
-                const name = prompt("Novo nome:", it.name);
+                const name = await showPrompt("Digite o novo nome do item.", it.name, { title: "Editar item" });
                 if (name === null) return;
-                const price = prompt("Novo preço:", it.price);
+                const price = await showPrompt("Digite o novo preço em moedas.", it.price, { title: "Editar preço", inputType: "number" });
                 if (price === null) return;
                 const r = await fetch("/api/admin/edit-item", {
                     method: "POST",
@@ -2133,7 +2232,7 @@ const updateUserUI = () => {
             delBtn.className = "reject";
             delBtn.innerHTML = `<i class="fas fa-trash"></i> Apagar`;
             delBtn.addEventListener("click", async () => {
-                if (!confirm(`Apagar o item "${it.name}"?`)) return;
+                if (!await showConfirm(`Apagar o item "${it.name}"?`, "Excluir item")) return;
                 const r = await fetch("/api/admin/delete-item", {
                     method: "DELETE",
                     headers: {
